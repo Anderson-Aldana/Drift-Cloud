@@ -675,11 +675,3 @@ footer {
   transform: scale(0.9);
   display: none;
 }
-
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: top 0.3s;
-  z-index: 1000;
-}
