@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #222;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #00d1b2;
+}
+
+nav a {
+  color: #00d1b2;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.intro, .productos {
+  padding: 1rem;
+  text-align: center;
+}
+
+.productos {
+  margin-top: 2rem;
+}
+
+.productos h2 {
+  color: #00d1b2;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.producto {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  position: relative;
+}
+
+.producto h3 {
+  color: #00d1b2;
+}
+
+.producto p {
+  margin: 0.5rem 0;
+}
+
+.producto button {
+  background-color: #00d1b2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.producto button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 0.5rem auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.sin-stock {
+  opacity: 0.6;
+}
+
+.etiqueta-stock {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: crimson;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #aaa;
+}
+
+.redes-sociales {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.redes-sociales img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.1);
+}
