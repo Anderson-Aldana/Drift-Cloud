@@ -48,7 +48,18 @@ window.addEventListener('scroll', function() {
     // Scroll hacia arriba
     whatsappBtn.style.transform = 'translateY(0)';
   }
-  
+
+  // Navigation Header
+  const header = document.querySelector('.main-header');
+  if (header) {
+    if (currentScroll <= 0) {
+      header.style.transform = 'translateY(0)';
+    } else if (currentScroll > lastScroll && currentScroll > 100) {
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+  }
   lastScroll = currentScroll;
 });
 
