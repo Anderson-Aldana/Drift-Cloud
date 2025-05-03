@@ -675,3 +675,12 @@ footer {
   transform: scale(0.9);
   display: none;
 }
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
