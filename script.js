@@ -109,3 +109,16 @@ function tieneBadge(producto, textoBadge) {
 
 // Evento para el selector de ordenamiento
 document.getElementById('sort').addEventListener('change', ordenarProductos);
+
+let prevScrollpos = window.pageYOffset;
+const navbar = document.getElementById("navbar");
+
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0"; // Mostrar nav
+  } else {
+    navbar.style.top = "-100px"; // Ocultar nav
+  }
+  prevScrollpos = currentScrollPos;
+};
