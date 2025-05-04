@@ -76,7 +76,7 @@ img {
 .btn-whatsapp img {
   position: relative;
   top: 8px; /* Mueve 2px hacia abajo */
-  left: 1px; /* Mueve 1px a la derecha */
+  left: 5px; /* Mueve 1px a la derecha */
 }
 
 .btn-primary {
