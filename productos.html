@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Drift & Cloud</title>
+  <meta name="description" content="Catálogo completo de vaporizadores Drift & Cloud. Haz tu pedido directamente por WhatsApp." />
+  <meta name="keywords" content="productos vape, vapes desechables, comprar vape, pedir por whatsapp" />
+  <link rel="icon" type="image/png" href="img/logo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="main-header" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Drift & Cloud" width="150">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html" class="active">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Encabezado de productos -->
+  <section class="products-header">
+    <div class="container"><br>
+      <br>
+      <br>
+      <h1>Nuestros Productos</h1>
+      <p>Todos nuestros vaporizadores incluyen carga completa y están listos para usar</p>
+    </div>
+  </section>
+
+  <!-- Filtros desplegable -->
+  <section class="products-filters">
+    <div class="container">
+      <button class="btn btn-outline filter-toggle" id="filterToggle">
+        Filtros 
+      </button>
+      
+      <div class="filter-dropdown" id="filterDropdown">
+        <div class="filter-group">
+          <h4>Marca</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="marca" value="todas" checked> Todas
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="marca" value="lifepod"> Life Pod
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="marca" value="oxbar"> Oxbar
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Categoría</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="todas" checked> Todas
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="frutales"> Frutales
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="postres"> Postres
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="mentolados"> Mentolados
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Ordenar por</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="orden" value="mas-vendidos" checked> Más vendidos
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="orden" value="precio-asc"> Precio (menor a mayor)
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="orden" value="precio-desc"> Precio (mayor a menor)
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="orden" value="novedades"> Novedades
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-actions">
+          <button class="btn btn-outline" id="limpiarFiltros">Limpiar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listado de productos -->
+  <section class="products-list">
+    <div class="container">
+      <div class="products-grid">
+
+        <!-- Producto 1 -->
+        <div class="product-card" data-marca="lifepod" data-category="frutales">
+          <span class="product-marca">Life Pod</span>
+          <div class="product-badge">Más vendido</div>
+          <img src="img/banana-custard.jpg" alt="Banana Custard">
+          <h3>Banana Custard - Eco II Kit</h3>
+          <p class="description">Crema de banana con toques de vainilla y caramelo | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 65.00</p>
+          <button onclick="pedirProducto('Banana Custard')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card" data-marca="lifepod" data-category="frutales">
+          <span class="product-marca">Life Pod</span>
+          <div class="product-badge">Nuevo</div>
+          <img src="img/pink-lemonade.jpg" alt="Pink Lemonade">
+          <h3>Pink Lemonade - Eco II Kit</h3>
+          <p class="description">Limonada rosa con un equilibrio perfecto entre dulce y ácido | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 70.00</p>
+          <button onclick="pedirProducto('Pink Lemonade')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/dragon-fruit-ice.jpg" alt="Dragon Fruit Ice">
+          <h3>Dragon Fruit Ice - Eco II Kit</h3>
+          <p class="description">Sabor pitahaya con toque fresco | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 70.00</p>
+          <button onclick="pedirProducto('Dragon Fruit Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card" data-category="postres">
+          <img src="img/white-mocha-ice.jpg" alt="White Mocha Ice">
+          <h3>White Mocha Ice</h3>
+          <p class="description">Sabor a café mocha y fresco helado.</p>
+          <p class="price">S/. 23.90</p>
+          <button onclick="pedirProducto('White Mocha Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-card">
+          <img src="img/red-orange.jpg" alt="Red Orange">
+          <h3>Red Orange</h3>
+          <p class="description">Sabor naranja roja.</p>
+          <p class="price">S/. 24.50</p>
+          <button onclick="pedirProducto('Red Orange')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-card sin-stock" data-category="frutales">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/love-66.jpg" alt="Love 66">
+          <h3>Love 66</h3>
+          <p class="description">Frutas exoticas y dulces.</p>
+          <p class="price">S/. 25.90</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <span class="product-marca">Oxbar</span>
+          <img src="img/narana-oxbar.jpg" alt="Naranja">
+          <h3>Naranja</h3>
+          <p class="description">Frutas exoticas y dulces.</p>
+          <p class="price">S/. 25.90</p>
+          <button onclick="pedirProducto('Naranja')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Necesitas ayuda para elegir?</h2>
+      <p>Nuestros expertos te asesorarán sin compromiso</p>
+      <a href="https://wa.me/51987654321" class="btn btn-whatsapp-lg">
+        <img src="img/whatsapp-icon.png" alt="WhatsApp"> Chatea con nosotros
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="img/logo-white.png" alt="Drift & Cloud" width="150">
+          <p>Vaporizadores premium con los mejores sabores del mercado.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="https://wa.me/51976404496"><img src="img/whatsapp-icon.png" alt="WhatsApp"> +51 976 404 496</a></li>
+            <li><a href="mailto:ventas@driftandcloud.com">ventas@driftandcloud.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Horario</h3>
+          <p>Lunes a Viernes: 9am - 8pm<br>
+          Sábados: 10am - 6pm</p>
+        </div>
+        <div class="footer-col">
+          <h3>Síguenos</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/drift_and_cloud/" target="_blank"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@driftandcloud" target="_blank"><img src="img/tiktok-icon.png" alt="TikTok"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Drift & Cloud. Todos los derechos reservados.</p>
+        <p class="disclaimer">Este producto contiene nicotina. La nicotina es una sustancia adictiva. Solo para mayores de 18 años.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/51976404496" class="whatsapp-float">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
