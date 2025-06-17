@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - Drift & Cloud</title>
+  <meta name="description" content="Catálogo completo de vaporizadores Drift & Cloud. Haz tu pedido directamente por WhatsApp." />
+  <meta name="keywords" content="productos vape, vapes desechables, comprar vape, pedir por whatsapp" />
+  <link rel="icon" type="image/png" href="img/logo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="main-header" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Drift & Cloud" width="150">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html" class="active">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Encabezado de productos -->
+  <section class="products-header">
+    <div class="container"><br>
+      <br>
+      <br>
+      <h1>Nuestros Productos</h1>
+      <p>Todos nuestros vaporizadores incluyen carga completa y están listos para usar</p>
+    </div>
+  </section>
+
+  <!-- Filtros desplegable -->
+  <section class="products-filters">
+    <div class="container">
+      <button class="btn btn-outline filter-toggle" id="filterToggle">
+        Filtros 
+      </button>
+      
+      <div class="filter-dropdown" id="filterDropdown">
+        <div class="filter-group">
+          <h4>Marca</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="marca" value="todas" checked> Todas
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="marca" value="lifepod"> Life Pod
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="marca" value="oxbar"> Oxbar
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Categoría</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="todas" checked> Todas
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="frutales"> Frutales
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="postres"> Postres
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="categoria" value="mentolados"> Mentolados
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Ordenar por</h4>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="radio" name="orden" value="mas-vendidos" checked> Más vendidos
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="orden" value="precio-asc"> Precio (menor a mayor)
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="orden" value="precio-desc"> Precio (mayor a menor)
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="orden" value="novedades"> Novedades
+            </label>
+          </div>
+        </div>
+        
+        <div class="filter-actions">
+          <button class="btn btn-outline" id="limpiarFiltros">Limpiar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listado de productos -->
+  <section class="products-list">
+    <div class="container">
+      <div class="products-grid">
+
+        <!-- Producto 1 -->
+        <div class="product-card" data-marca="lifepod" data-category="frutales">
+          <div class="product-badge">Más vendido</div>
+          <img src="img/blackberry-ice.jpg" alt="Blackberry Ice">
+          <h3>Blackberry Ice - Eco II Kit</h3>
+          <p class="description">Intensidad de moras combinadas con un toque de hielo. | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button onclick="pedirProducto('Kit Blackberry Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card" data-marca="lifepod" data-category="frutales">
+          <img src="img/banana-custard.jpg" alt="Banana Custard">
+          <h3>Banana Custard - Eco II Kit</h3>
+          <p class="description">Crema de banana con toques de vainilla y caramelo | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button onclick="pedirProducto('Kit Banana Custard')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+      
+        <!-- Producto 3 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="frutales">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/love-66.jpg" alt="Love 66">
+          <h3>Love 66 - Eco II Kit</h3>
+          <p class="description">Frutas exoticas y dulces | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card" data-marca="lifepod" data-category="frutales">
+          <div class="product-badge">Más vendido</div>
+          <img src="img/summer-love.jpg" alt="Summer Love">
+          <h3>Summer Love - Eco II Kit</h3>
+          <p class="description">Frutas frescas y dulces | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button onclick="pedirProducto('Kit Summer Love')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-card"  data-marca="lifepod" data-category="frutales">
+          <div class="product-badge">Más vendido</div>
+          <img src="img/grape-honeydew.jpg"  alt="Grape Honeydew">
+          <h3>Grape Honeydew - Eco II Kit</h3>
+          <p class="description">Vibrante toque de uvas y limon | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button onclick="pedirProducto('Kit Grape Honeydew')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-card" data-marca="lifepod" data-category="mentolados">
+          <img src="img/menthol.jpg" alt="Menthol">
+          <h3>Menthol - Eco II Kit</h3>
+          <p class="description">Intenso sabor a menta | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button onclick="pedirProducto('Kit Menthol')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/pink-lemonade.jpg" alt="Pink Lemonade">
+          <h3>Pink Lemonade - Eco II Kit</h3>
+          <p class="description">Limonada rosa con un equilibrio perfecto entre dulce y ácido | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button onclick="pedirProducto('Kit Pink Lemonade')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="mentolados">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/tobacco-virgina.jpg" alt="Tobacco Virginia">
+          <h3>Tobacco Virginia - Eco II Kit</h3>
+          <p class="description">Sabor tobacco virgina, clasico y elegante | Life Pod Eco II Kit | 10000 Puffs</p>
+          <p class="price">S/. 80.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="product-card" data-marca="lifepod" data-category="mentolados">
+          <img src="img/banana-custard2.png" alt="Banana Custard">
+          <h3>Banana Custard - Eco II Prefilled</h3>
+          <p class="description">Crema de banana con toques de vainilla y caramelo | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Kit Banana Custard')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="mentolados">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/banana-ice2.png" alt="Banana Ice">
+          <h3>Banana Ice - Eco II Prefilled</h3>
+          <p class="description">Sabor banana con toque fresco | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 11 -->
+        <div class="product-card" data-marca="lifepod" data-category="mentolados">
+          <img src="img/blackberry-ice2.png" alt="Blackberry Ice">
+          <h3>Blackberry Ice - Eco II Prefilled</h3>
+          <p class="description">Sabor a moras | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Kit Blackberry Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 12 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="mentolados">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/blueberry-mint2.png" alt="Blueberry Mint">
+          <h3>Blueberry Mint - Eco II Prefilled</h3>
+          <p class="description">Sabor a arandanos | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 13 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="mentolados">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/blue-cake-strawberry2.png" alt="Blue Cake Strawberry">
+          <h3>Blue Cake Strawberry - Eco II Prefilled</h3>
+          <p class="description">Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 14 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="mentolados">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/candy-ice2.png" alt="Candy Ice">
+          <h3>Candy Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Candy Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 15 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/capuccino2.png" alt="Capuccino">
+          <h3>Capuccino - Eco II Prefilled</h3>
+          <p class="description">Recarga de capuccino | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Capuccino')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 16 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/white-mocha-ice2.png" alt="White Mocha Ice">
+          <h3>White Mocha Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de White Mocha Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga White Mocha Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 17 --> 
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/cherry-lime-ginger2.png" alt="Cherry Lime Ginger"> 
+          <h3>Cherry Lime Ginger - Eco II Prefilled</h3>
+          <p class="description">Recarga de Cherry Lime Ginger | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Cherry Lime Ginger')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 18 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/cranberry-soda2.png" alt="Cranberry Soda"> 
+          <h3>Cranberry Soda - Eco II Prefilled</h3>
+          <p class="description">Recarga de Cranberry Soda | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 19 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/dragon-fruitice2.png" alt="Dragon Fruit Ice"> 
+          <h3>Dragon Fruit Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Dragon Fruit Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 20 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/grape-honey2.png" alt="Grape Honey"> 
+          <h3>Grape Honey - Eco II Prefilled</h3>
+          <p class="description">Recarga de Grape Honey | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Grape Honey')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 21 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/green-apple-ice2.png" alt="Green Apple Ice"> 
+          <h3>Green Apple Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Green Apple Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Green Apple Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 22 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/summer-love2.png" alt="Summer Love"> 
+          <h3>Summer Love - Eco II Prefilled</h3>
+          <p class="description">Recarga de Summer Love | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 23 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/mint-berries-watermelon2.png" alt="Mint Berries Watermelon"> 
+          <h3>Mint Berries Watermelon - Eco II Prefilled</h3>
+          <p class="description">Recarga de Mint Berries Watermelon | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 24 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/kiwi-berry2.png" alt="Kiwi Berry"> 
+          <h3>Kiwi Berry - Eco II Prefilled</h3>
+          <p class="description">Recarga de Kiwi Berry | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 25 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/love66-2.png" alt="Love66"> 
+          <h3>Love66 - Eco II Prefilled</h3>
+          <p class="description">Recarga de Love66 | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 26 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/menthol2.png" alt="Menthol"> 
+          <h3>Menthol - Eco II Prefilled</h3>
+          <p class="description">Recarga de Menthol | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Menthol')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 27 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/miami-mint2.png" alt="Miami Mint"> 
+          <h3>Miami Mint - Eco II Prefilled</h3>
+          <p class="description">Recarga de Miami Mint | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+
+        <!-- Producto 28 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/monster-drink2.png" alt="Monster Drink"> 
+          <h3>Monster Drink - Eco II Prefilled</h3>
+          <p class="description">Recarga de Monster Drink | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 29 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/blueberry-strawberry2.png" alt="Blueberry Strawberry"> 
+          <h3>Blueberry Strawberry - Eco II Prefilled</h3>
+          <p class="description">Recarga de Blueberry Strawberry | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Blueberry Strawberry')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 30 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <img src="img/pink-lemonade2.png" alt="Pink Lemonade"> 
+          <h3>Pink Lemonade - Eco II Prefilled</h3>
+          <p class="description">Recarga de Pink Lemonade | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Pink Lemonade')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 31 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/watermelon-peachice2.png" alt="Watermelon Peach Ice"> 
+          <h3>Watermelon Peach Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Watermelon Peach Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 32 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/tobacco-virginia2.png" alt="Tobacco Virginia"> 
+          <h3>Tobacco Virginia - Eco II Prefilled</h3>
+          <p class="description">Recarga de Tobacco Virginia | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 33 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/polarice2.png" alt="Polar Ice"> 
+          <h3>Polar Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Polar Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 34 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/strawberry-watermelon-ice2.png" alt="Strawberry Watermelon Ice"> 
+          <h3>Strawberry Watermelon Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Strawberry Watermelon Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 35 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/coconut-watermelon2.png" alt="Coconut Watermelon"> 
+          <h3>Coconut Watermelon - Eco II Prefilled</h3>
+          <p class="description">Recarga de Coconut Watermelon | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 36 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/passion-mango-frost2.png" alt="Passion Mango Frost"> 
+          <h3>Passion Mango Frost - Eco II Prefilled</h3>
+          <p class="description">Recarga de Passion Mango Frost | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+
+        <!-- Producto 37 -->
+        <div class="product-card sin-stock" data-marca="lifepod" data-category="postres">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/green-grape-ice2.png" alt="Green Grape Ice"> 
+          <h3>Green Grape Ice - Eco II Prefilled</h3>
+          <p class="description">Recarga de Green Grape Ice | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+        
+        <!-- Producto 38 -->
+        <div class="product-card" data-marca="lifepod" data-category="postres">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/dragon-blue-razz2.png" alt="Dragon Blue Razz"> 
+          <h3>Dragon Blue Razz - Eco II Prefilled</h3>
+          <p class="description">Recarga de Dragon Blue Razz | Life Pod Eco II Prefilled | 10000 Puffs</p>
+          <p class="price">S/. 53.00</p>
+          <button onclick="pedirProducto('Recarga Dragon Blue Razz')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+
+        <!-- Producto O9 -->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/grape-bull.png" alt="Grape Bull">
+          <h3>Grape Bull - Svopp Kit</h3>
+          <p class="description">Toque de uvas y red bull | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Grape Bull')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 10-->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/cherry-cola-ice.png" alt="Cherry Cola Ice">
+          <h3>Cherry Cola Ice - Svopp Kit</h3>
+          <p class="description">Sabor a cereza con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Cherry Cola Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 11-->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <img src="img/watermelon-ice.png" alt="Watermelon Ice">
+          <h3>Watermelon Ice - Svopp Kit</h3>
+          <p class="description">Sabor a sandia con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Watermelon Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 12-->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/mango-peach-ice.png" alt="Mango Peach Ice">
+          <h3>Mango Peach Ice Svopp Kit</h3>
+          <p class="description">Sabor a mango con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Mango Peach Ice')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 13-->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/orange-fanta.png" alt="Orange Fanta">
+          <h3>Orange Fanta - Svopp Kit</h3>
+          <p class="description">Sabor a naranja con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Orange Fanta')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 14-->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <div class="product-badge">Nuevo</div>
+          <img src="img/strawberry-watermelon.png" alt="Strawberry Watermelon">
+          <h3>Strawberry Watermelon - Svopp Kit</h3>
+          <p class="description">Sabor a fresas y sandia con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Strawberry Watermelon')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 15-->
+        <div class="product-card" data-marca="oxbar" data-category="frutales">
+          <img src="img/blueberry-raspberry-lemon.png" alt="Blueberry Raspberry Lemon">
+          <h3>Blueberry Raspberry Lemon - Svopp Kit</h3>
+          <p class="description">Sabor a moras y arandanos con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button onclick="pedirProducto('Blueberry Raspberry Lemon')" class="btn btn-whatsapp">
+            <img src="img/whatsapp-icon.png" alt="WhatsApp"> Pedir
+          </button>
+        </div>
+
+        <!-- Producto 16-->
+        <div class="product-card sin-stock" data-marca="oxbar" data-category="frutales">
+          <span class="etiqueta-stock">Agotado</span>
+          <img src="img/strawberry-watermelon-peach.png" alt="Strawberry Watermelon Peach">
+          <h3>Strawberry Watermelon Peach - Svopp Kit</h3>
+          <p class="description">Sabor a fresas y sandia con un toque helado | Oxbar Svopp Kit | 25000 Puffs</p>
+          <p class="price">S/. 85.00</p>
+          <button disabled class="btn btn-disabled">No disponible</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Necesitas ayuda para elegir?</h2>
+      <p>Nuestros expertos te asesorarán sin compromiso</p>
+      <a href="https://wa.me/51976404496?text=¡Hola%20Drift%20%26%20Cloud!%20Estoy%20interesado%20en%20sus%20productos%20y%20quisiera%20más%20información.%20¿Podrían%20ayudarme%20a%20elegir%20la%20mejor%20opción%20según%20mis%20gustos?" class="btn btn-whatsapp-lg">
+        <img src="img/whatsapp-icon.png" alt="WhatsApp"> Chatear con nosotros
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="img/logo-white.png" alt="Drift & Cloud" width="150">
+          <p>Vaporizadores premium con los mejores sabores del mercado.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="https://wa.me/51976404496"><img src="img/whatsapp-icon.png" alt="WhatsApp"> +51 976 404 496</a></li>
+            <li><a href="mailto:ventas@driftandcloud.com">ventas@driftandcloud.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Horario</h3>
+          <p>Lunes a Viernes: 9am - 8pm<br>
+          Sábados: 10am - 6pm</p>
+        </div>
+        <div class="footer-col">
+          <h3>Síguenos</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/drift_and_cloud_smoke/" target="_blank"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@driftandcloud" target="_blank"><img src="img/tiktok-icon.png" alt="TikTok"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Drift & Cloud. Todos los derechos reservados.</p>
+        <p class="disclaimer">Este producto contiene nicotina. La nicotina es una sustancia adictiva. Solo para mayores de 18 años.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/51976404496" class="whatsapp-float">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
