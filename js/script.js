@@ -220,8 +220,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close search results when clicking outside
     document.addEventListener('click', function(e) {
+        const isMobile = window.innerWidth <= 768;
+        
+        // Hide search results if clicking outside
         if (!searchForm.contains(e.target) && !searchResults.contains(e.target)) {
             searchResults.style.display = 'none';
+        }
+        
+        // For mobile: also hide the search container if clicking outside
+        if (isMobile && searchContainer.classList.contains('active') && 
+            !searchContainer.contains(e.target) && 
+            !mobileSearchToggle.contains(e.target)) {
+            searchContainer.classList.remove('active');
         }
     });
 });
