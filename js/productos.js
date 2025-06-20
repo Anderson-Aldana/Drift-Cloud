@@ -1510,6 +1510,7 @@ function displayPaginatedProducts(products, containerId) {
 }
 
 // Función para configurar la paginación
+// Función para configurar la paginación
 function setupPagination(totalProducts) {
     const totalPages = Math.ceil(totalProducts / productsPerPage);
     const pageNumbersContainer = document.getElementById('page-numbers');
@@ -1529,6 +1530,8 @@ function setupPagination(totalProducts) {
         pageBtn.addEventListener('click', () => {
             currentPage = i;
             applyFilters();
+            // Scroll suave al inicio de los productos
+            document.querySelector('.products-main').scrollIntoView({ behavior: 'smooth' });
         });
         pageNumbersContainer.appendChild(pageBtn);
     }
@@ -1541,6 +1544,8 @@ function setupPagination(totalProducts) {
         if (currentPage > 1) {
             currentPage--;
             applyFilters();
+            // Scroll suave al inicio de los productos
+            document.querySelector('.products-main').scrollIntoView({ behavior: 'smooth' });
         }
     });
     
@@ -1548,6 +1553,8 @@ function setupPagination(totalProducts) {
         if (currentPage < totalPages) {
             currentPage++;
             applyFilters();
+            // Scroll suave al inicio de los productos
+            document.querySelector('.products-main').scrollIntoView({ behavior: 'smooth' });
         }
     });
 }
