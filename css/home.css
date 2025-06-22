@@ -724,7 +724,6 @@
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
-    margin-bottom: 30px;
     display: none; /* Oculto por defecto */
     box-sizing: border-box;
 }
