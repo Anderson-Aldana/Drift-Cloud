@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift & Cloud - Vaporizadores Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Vaporizadores desechables con sabores premium. Pedidos por WhatsApp con envío rápido y gratis." />
+    <meta name="keywords" content="vapes, vapeo, vaporizadores, cigarros electrónicos, comprar vape, pedir por whatsapp, drift and cloud" />
+    <meta property="og:title" content="Drift & Cloud - Vaporizadores Premium" />
+    <meta property="og:description" content="Vaporizadores desechables con sabores premium. Pedidos por WhatsApp con envío rápido y gratis." />
+    <meta property="og:image" content="https://driftandcloud.netlify.app/img/logo.jpg" />
+    <meta property="og:url" content="https://driftandcloud.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Drift & Cloud" />
+    <!-- Datos estructurados (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Drift & Cloud",
+        "url": "https://driftandcloud.netlify.app",
+        "logo": "https://driftandcloud.netlify.app/img/logo.jpg"
+    }
+    </script>
+</head>
+<body> 
+
+    <section class="sunday-offer-banner" id="sunday-offer-banner">
+        <div class="container">
+            <h2>🔥Dia de Ofertas Especiales🔥</h2>
+            <p>Aprovecha nuestros descuentos exclusivos solo por hoy.</p>
+        </div>
+    </section>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-white.png" alt="Drift & Cloud"></a>
+            </div>
+            <!-- En la sección del header, dentro del div.container, después del logo y antes del nav -->
+            <div class="search-container">
+                <form class="search-form">
+                    <input type="text" placeholder="Buscar productos..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="search-results"></div>
+            </div>
+            <button class="mobile-search-toggle">
+                <i class="fas fa-search"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <!--<li><a href="admin1.html" class="admin-link">Admin</a></li>-->
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <!-- Lifepod -->
+            <div class="slide active">
+                <a href="productos.html?marca=Lifepod" class="slide-link">
+                    <img src="img/banner1.jpg" alt="Lifepod">
+                </a>
+            </div>
+            
+            <!-- Oxbar -->
+            <div class="slide">
+                <a href="productos.html?marca=Oxbar" class="slide-link">
+                    <img src="img/banner2.jpg" alt="Oxbar">
+                </a>
+            </div>
+            
+            <!-- Elfbar -->
+            <div class="slide">
+                <a href="productos.html?marca=Elfbar" class="slide-link">
+                    <img src="img/banner3.jpg" alt="Elfbar">
+                </a>
+            </div>
+            
+            <div class="slider-nav">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots"></div>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <h3>Envíos rápidos</h3>
+                <p>Llegamos a todo Piura.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-lock"></i>
+                <h3>Compras seguras</h3>
+                <p>Compra de manera 100% segura</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Cambios y devoluciones</h3>
+                <p>Brindamos seguridad en tu compra.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-tag"></i>
+                <h3>Promociones</h3>
+                <p>Las mejores ofertas en vapes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Productos Más Vendidos</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Los productos más vendidos se cargarán aquí con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- En index.html, después de la sección de Productos Destacados -->
+    <section class="new-products">
+        <div class="container">
+            <h2>Nuevos Productos</h2>
+            <div class="products-grid" id="new-products">
+                <!-- Los productos nuevos se cargarán aquí con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Promociones -->
+    <section class="promotions">
+        <div class="container">
+            <h2>Promociones Especiales</h2>
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <img src="img/Lifepod/pink-lemonade-kit.jpg" alt="Promoción 1">
+                    <div class="promo-content">
+                        <h3>Lifepod Pink Lemonade Kit</h3>
+                        <p class="old-price">S/110.00</p>
+                        <p class="new-price">S/80.00</p>
+                        <a href="producto.html?id=lifepod-pink-lemonade-kit" class="btn">Ver Oferta</a>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <img src="img/Oxbar/mango-tango-kit.jpg" alt="Promoción 2">
+                    <div class="promo-content">
+                        <h3>Oxbar Mango Peach Ice Kit</h3>
+                        <p class="old-price">S/120.00</p>
+                        <p class="new-price">S/80.00</p>
+                        <a href="producto.html?id=oxbar-mango-peach-ice-kit" class="btn">Ver Oferta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería escalonada -->
+    <section class="media-showcase" style="margin-top: 40px; margin-bottom: 60px;">
+        <div class="container">
+            <div class="media-grid">
+                <!-- Video principal -->
+                <div class="media-item video-container">
+                    <video autoplay muted loop playsinline poster="img/showcase/video-poster.jpg">
+                        <source src="img/showcase/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <!-- Imágenes cuadradas -->
+                <div class="media-item img-container top-img">
+                    <img src="img/showcase/1.jpg" alt="Producto 1">
+                </div>
+                
+                <div class="media-item img-container">
+                    <img src="img/showcase/2.jpg" alt="Producto 2">
+                </div>
+
+                <div class="media-item img-container">
+                    <img src="img/showcase/3.jpg" alt="Producto 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Quieres más?</h2>
+            <p>Descubre nuestras últimas novedades y ofertas exclusivas</p>
+            <a href="productos.html?filter=new" class="btn">Ver Novedades</a>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="brands">
+        <div class="container">
+            <h2>Conoce Nuestras Marcas</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <img src="img/Lifepod/lifepod-logo.png" alt="Lifepod">
+                    <h3>Life Pod</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="img/Oxbar/oxbar-logo.png" alt="Oxbar">
+                    <h3>Oxbar</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="img/Elfbar/elfbar-logo.png" alt="Elfbar">
+                    <h3>Elfbar</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Lo que Opinan Nuestros Clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excelente servicio y productos de calidad. Mi Lifepod llegó en perfecto estado y el sabor es increíble."</p>
+                    <div class="client">
+                        <h4>Stiwar Z.</h4>
+                        <p>Talara</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Rápido envío y buena atención. El Oxbar Mango Tango es mi favorito, lo recomiendo 100%."</p>
+                    <div class="client">
+                        <h4>Yahir L.</h4>
+                        <p>Castilla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artículos -->
+    <section class="articles">
+        <div class="container">
+            <h2>Artículos Recientes</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <img src="img/articles/vape-tips.jpg" alt="Consejos para vapear">
+                    <div class="article-content">
+                        <h3>Consejos para Mantener tu Vape</h3>
+                        <p>Aprende cómo alargar la vida útil de tu dispositivo con estos simples consejos...</p>
+                        <a href="articulo1.html" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="img/articles/new-flavors.jpg" alt="Nuevos sabores">
+                    <div class="article-content">
+                        <h3>Nuevos Sabores 2025</h3>
+                        <p>Descubre los sabores más innovadores que llegan este año al mercado...</p>
+                        <a href="articulo2.html" class="read-more">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="img/logo-white1.png" alt="Drift & Cloud" width="150">
+                    <p>Vaporizadores premium con los mejores sabores del mercado.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="https://wa.me/51976404496?text=Hola%20Drift%20and%20Cloud%2C%20me%20interesan%20sus%20vapes.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"><img src="img/icons/whatsapp-icon.png" alt="WhatsApp"> ‪+51 976 404 496‬</a></li>
+                        <li><a href="mailto:ventas@driftandcloud.com">ventas@driftandcloud.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes: 9am - 8pm<br>
+                    Sábados: 10am - 6pm</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/drift_and_cloud_smoke/" target="_blank"><img src="img/icons/instagram-icon.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@driftandcloud" target="_blank"><img src="img/icons/tiktok-icon.png" alt="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Drift & Cloud. Todos los derechos reservados.</p>
+                <p class="disclaimer">Este producto contiene nicotina. La nicotina es una sustancia adictiva. Solo para mayores de 18 años.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/51976404496?text=Hola%20Drift%20and%20Cloud%2C%20me%20interesan%20sus%20vapes.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="whatsapp-float" target="_blank">
+        <img src="img/icons/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+</html>
