@@ -802,7 +802,7 @@ if (!window.productsDatabase) {
             puffs: '10000',
             capacity: '18ml',
             nicotine: '5%',
-            available: true,
+            available: false,
             tag: '',
         },
         {
