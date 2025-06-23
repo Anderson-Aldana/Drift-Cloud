@@ -470,7 +470,7 @@ if (!window.productsDatabase) {
         //Lifepod Recargas...................................................................
         {
             id: 'lifepod-banana-custard-refill',
-            name: 'Banana Custard Prefilled',
+            name: 'Banana Custard Recarga',
             brand: 'Lifepod',
             type: 'recarga',
             flavor: 'Frutal',
