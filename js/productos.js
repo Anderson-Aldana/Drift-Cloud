@@ -834,7 +834,7 @@ if (!window.productsDatabase) {
             puffs: '10000',
             capacity: '18ml',
             nicotine: '5%',
-            available: true,
+            available: false,
             tag: '',
         },
         {
@@ -930,7 +930,7 @@ if (!window.productsDatabase) {
             puffs: '10000',
             capacity: '18ml',
             nicotine: '5%',
-            available: true,
+            available: false,
             tag: '',
         },
         {
@@ -1012,8 +1012,7 @@ if (!window.productsDatabase) {
             puffs: '25000',
             capacity: '20ml',
             nicotine: '5%',
-            available: true,
-            tag: 'Más vendido',
+            available: false,
         },
         {
             id: 'oxbar-orange-fanta-kit',
