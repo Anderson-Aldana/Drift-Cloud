@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Drift & Cloud</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+</head>
+<body class="admin-page">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-white.png" alt="Drift & Cloud"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="admin-logout">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Main -->
+    <main class="admin-main">
+        <div class="container">
+            <h1>Panel de Administración <span class="admin-name">(Anderson)</span></h1>
+            
+            <!-- Search and Add Product -->
+            <div class="admin-toolbar">
+                <div class="search-container">
+                    <form class="search-form">
+                        <input type="text" placeholder="Buscar productos..." class="search-input" id="admin-search">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <button id="add-product" class="btn">
+                    <i class="fas fa-plus"></i> Añadir Producto
+                </button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="admin-products-grid" id="admin-products-grid">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+            </div>
+            
+            <!-- Add/Edit Product Modal -->
+            <div class="modal" id="product-modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2 id="modal-title">Añadir Nuevo Producto</h2>
+                    <form id="product-form">
+                        <input type="hidden" id="product-id">
+                        
+                        <div class="form-group">
+                            <label for="product-name">Nombre del Producto</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-brand">Marca</label>
+                                <select id="product-brand" required>
+                                    <option value="Lifepod">Lifepod</option>
+                                    <option value="Oxbar">Oxbar</option>
+                                    <option value="Elfbar">Elfbar</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-type">Tipo</label>
+                                <select id="product-type" required>
+                                    <option value="kit">Kit completo</option>
+                                    <option value="recarga">Recarga</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-flavor">Sabor</label>
+                                <input type="text" id="product-flavor" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-puffs">Puffs</label>
+                                <input type="text" id="product-puffs" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-capacity">Capacidad</label>
+                                <input type="text" id="product-capacity" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-nicotine">Nicotina</label>
+                                <input type="text" id="product-nicotine" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-price">Precio (S/)</label>
+                                <input type="number" step="0.01" id="product-price" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-offerprice">Precio Oferta (S/)</label>
+                                <input type="number" step="0.01" id="product-offerprice">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product-description">Descripción</label>
+                            <textarea id="product-description" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-tag">Etiqueta</label>
+                                <select id="product-tag">
+                                    <option value="">Ninguna</option>
+                                    <option value="Más vendido">Más vendido</option>
+                                    <option value="Nuevo">Nuevo</option>
+                                    <option value="Promocion">Promoción</option>
+                                    <option value="Agotado">Agotado</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-available">Disponibilidad</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="product-available" checked>
+                                    <span class="slider"></span>
+                                </label>
+                                <span id="available-text">Disponible</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product-image">Imagen (nombre del archivo)</label>
+                            <input type="text" id="product-image" required>
+                            <small>Ejemplo: "nombre-imagen.jpg" (debe estar en la carpeta de la marca)</small>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn">Guardar Producto</button>
+                            <button type="button" class="btn btn-cancel" id="cancel-edit">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
