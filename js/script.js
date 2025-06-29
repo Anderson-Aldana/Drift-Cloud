@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Función para verificar si hoy es domingo
 function isSunday() {
     const today = new Date();
-    return today.getDay() === 0; // 0 es domingo
+    return today.getDay() === 1; // 0 es domingo
 }
 
 // Función para manejar las ofertas dominicales
