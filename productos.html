@@ -11,6 +11,9 @@
     <meta name="description" content="Descubre los nuevos vaporizadores Drift & Cloud - Sabores exclusivos y kits recién llegados">
     <meta name="keywords" content="productos vape, vapes desechables, comprar vape, pedir por whatsapp" />
     <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
 </head>
 <body>
     
@@ -217,8 +220,6 @@
         <img src="img/icons/whatsapp-icon.png" alt="WhatsApp">
     </a>
 
-    <script src="js/script.js"></script>
-    <script src="js/productos.js"></script>
     <script>
         // Toggle del panel de filtros
         document.querySelector('.filters-toggle').addEventListener('click', function() {
@@ -258,5 +259,9 @@
             });
         });
     </script>
+    <!-- Mover estos scripts al final del body, antes del cierre </body> -->
+    <script src="./js/firestore-config.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar sesión - Drift & Cloud</title>
+  <link rel="stylesheet" href="./css/admin.css">
+  <link rel="icon" type="image/png" href="img/admin.png" />
+
+  <!-- Firebase SDK clásico -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  
+
+  <!-- Configuración Firebase -->
+  <script src="./js/firestore-config.js"></script>
+</head>
+<body class="hidden">
+  <div class="centrado" id="onload"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+  <div class="login-container">
+    <div class="login-footer" style="text-align:center;">
+      <a href="index.html"><img id="footer-logo" src="./img/logo.png" alt="logo" /></a>
+    </div>
+    <h2 style="text-align:center; margin-bottom:1rem;">Iniciar sesión</h2>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button type="submit" class="bg-primary">Ingresar</button>
+      <p id="error-msg"></p>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const errorMsg = document.getElementById('error-msg');
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      // Mostrar preloader inmediatamente al hacer clic
+      document.getElementById('onload').style.display = 'flex';
+      document.body.classList.add('hidden');
+      errorMsg.textContent = '';
+
+      try {
+        const result = await auth.signInWithEmailAndPassword(email, password);
+        const user = result.user;
+
+        const docRef = db.collection("users").doc(user.email);
+        const docSnap = await docRef.get();
+
+        if (docSnap.exists) {
+          const role = docSnap.data().role;
+          localStorage.setItem("userEmail", user.email);
+          localStorage.setItem("userRole", role);
+
+          if (role === "admin") {
+            window.location.href = "admin1.html";
+          } else if (role === "limited") {
+            window.location.href = "admin2.html";
+          } else {
+            errorMsg.textContent = "Rol desconocido.";
+            // Ocultar preloader si hay error
+            document.getElementById('onload').style.display = 'none';
+            document.body.classList.remove('hidden');
+          }
+        } else {
+          errorMsg.textContent = "No se encontró el rol del usuario.";
+          // Ocultar preloader si hay error
+          document.getElementById('onload').style.display = 'none';
+          document.body.classList.remove('hidden');
+        }
+      } catch (err) {
+        console.error(err);
+        errorMsg.textContent = "Correo o contraseña incorrectos.";
+        // Ocultar preloader si hay error
+        document.getElementById('onload').style.display = 'none';
+        document.body.classList.remove('hidden');
+      }
+    });
+
+    // Triple clic en el logo para activar login
+    let clickCount = 0;
+    const logo = document.getElementById("footer-logo");
+    logo.addEventListener("click", () => {
+      clickCount++;
+      if (clickCount >= 3) {
+        window.location.href = "login.html";
+      }
+      setTimeout(() => { clickCount = 0; }, 2000);
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/preloader.js"></script>
+</body>
+</html>

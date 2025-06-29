@@ -31,7 +31,7 @@
 
     <section class="sunday-offer-banner" id="sunday-offer-banner">
         <div class="container">
-            <h3>🔥Dia de Ofertas Especiales🔥</h3>
+            <h2>🔥Dia de Ofertas Especiales🔥</h2>
             <p>Aprovecha nuestros descuentos exclusivos solo por hoy.</p>
         </div>
     </section>
@@ -332,30 +332,41 @@
         <img src="img/icons/whatsapp-icon.png" alt="WhatsApp">
     </a>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+    <!-- Configuración de Firebase -->
+    <script src="js/firestore-config.js"></script>
+
+    <!-- Luego, carga tus scripts -->
     <script src="js/script.js"></script>
     <script src="js/productos.js"></script>
+      <!-- SCRIPT EXTRA PARA INDEX - CARGA DE PRODUCTOS MÁS VENDIDOS Y NUEVOS -->
     <script>
-        // Acceso oculto al admin desde el logo del footer
-        document.addEventListener('DOMContentLoaded', function() {
-            const footerLogo = document.querySelector('footer .footer-col img');
-            if (footerLogo) {
-                let clickCount = 0;
-                let lastClickTime = 0;
-                
-                footerLogo.addEventListener('click', function() {
-                    const now = new Date().getTime();
-                    if (now - lastClickTime < 500) { // Doble click en menos de 500ms
-                        clickCount++;
-                        if (clickCount >= 3) { // Triple click
-                            window.location.href = 'admin-login.html';
-                            clickCount = 0;
-                        }
-                    } else {
-                        clickCount = 1;
-                    }
-                    lastClickTime = now;
-                });
+        document.addEventListener('DOMContentLoaded', async () => {
+        const db = firebase.firestore();
+
+        try {
+            const snapshot = await db.collection("products").get();
+            const allProducts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+            // Más vendidos
+            const featured = allProducts.filter(p => p.tag === 'Más vendido' && p.available);
+            if (document.getElementById('featured-products')) {
+            displayStoreProducts(featured.slice(0, 4), 'featured-products');
             }
+
+            // Nuevos productos
+            const news = allProducts.filter(p => p.tag === 'Nuevo');
+            news.sort((a, b) => b.available - a.available);
+            if (document.getElementById('new-products')) {
+            displayStoreProducts(news.slice(0, 4), 'new-products');
+            }
+        } catch (error) {
+            console.error("Error cargando productos en index.html:", error);
+        }
         });
     </script>
 </body>
