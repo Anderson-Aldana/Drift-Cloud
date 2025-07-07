@@ -109,7 +109,7 @@
         }
 
         product.id = productId;
-        const offerDay = new Date().getDay() === 0||6;
+        const offerDay = new Date().getDay() === 0;
         document.getElementById('product-title').textContent = `${product.name} - Drift & Cloud`;
 
         const productDetail = document.getElementById('product-detail');
