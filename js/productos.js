@@ -125,7 +125,8 @@ function getURLFilters() {
   return {
     marca: params.get('marca'),
     tipo: params.get('tipo'),
-    sabor: params.get('sabor')
+    sabor: params.get('sabor'),
+    search: params.get('search')
   };
 }
 
@@ -138,6 +139,18 @@ function applyFilters() {
   }
 
   let filtered = [...window.productsDatabase];
+  const urlFilters = getURLFilters();
+
+    // Filtro de búsqueda (si existe en la URL)
+  if (urlFilters.search) {
+    const searchQuery = urlFilters.search.toLowerCase();
+    filtered = filtered.filter(product => 
+      product.name.toLowerCase().includes(searchQuery) || 
+      product.brand.toLowerCase().includes(searchQuery) || 
+      product.flavor.toLowerCase().includes(searchQuery) ||
+      product.description.toLowerCase().includes(searchQuery)
+    );
+  }
 
   // Marca
   const brandFilters = Array.from(document.querySelectorAll('input[name="marca"]:checked'))
@@ -187,6 +200,13 @@ document.addEventListener("FirebaseProductsReady", () => {
     if (urlFilters.sabor) {
       const checkbox = document.querySelector(`input[name="sabor"][value="${urlFilters.sabor}"]`);
       if (checkbox) checkbox.checked = true;
+    }
+        // Si hay un parámetro de búsqueda en la URL, mostrarlo en el input
+    if (urlFilters.search) {
+      const searchInput = document.querySelector('.search-input');
+      if (searchInput) {
+        searchInput.value = urlFilters.search;
+      }
     }
 
     applyFilters(); // <-- aplicar después de marcar checkboxes

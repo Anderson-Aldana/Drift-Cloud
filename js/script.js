@@ -171,16 +171,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (query.length < 1) return;
             
-            const results = window.productsDatabase.filter(product => {
-                return product.name.toLowerCase().includes(query) || 
-                    product.brand.toLowerCase().includes(query) || 
-                    product.flavor.toLowerCase().includes(query) ||
-                    product.description.toLowerCase().includes(query);
-            });
-            
-            if (results.length > 0) {
-                window.location.href = `productos.html?search=${encodeURIComponent(query)}`;
-            }
+            // Redirigir directamente a la página de productos con el parámetro de búsqueda
+            window.location.href = `productos.html?search=${encodeURIComponent(query)}`;
         });
     }
     
