@@ -552,7 +552,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    height: 90%; /* Ocupa toda la altura del contenedor padre */
+    height: 80%; /* Ocupa toda la altura del contenedor padre */
   }
 
   .loader {
