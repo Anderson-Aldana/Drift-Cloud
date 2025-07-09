@@ -31,6 +31,12 @@ function displayStoreProducts(products, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
+      // Ocultar preloader
+  const loadingElement = document.getElementById('products-loading');
+  if (loadingElement) {
+    loadingElement.style.display = 'none';
+  }
+
   const offerDay = isOfferDay();
 
   container.innerHTML = products.map(product => `
