@@ -1,5 +1,5 @@
 // Agrega esto al inicio de productos.js o script.js
-const includeSaturdayOffers = true; // Cambiar a false para desactivar ofertas de sábado
+const includeSaturdayOffers = false; // Cambiar a false para desactivar ofertas de sábado
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
