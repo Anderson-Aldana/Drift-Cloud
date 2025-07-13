@@ -99,9 +99,7 @@
 }
 
 .features-bar .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    display: flex;
 }
 
 .feature {
