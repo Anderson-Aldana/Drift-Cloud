@@ -131,29 +131,6 @@
     margin: 25px 0;
 }
 
-.meta-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.meta-label {
-    font-size: 0.9rem;
-    color: var(--gray-color);
-    margin-bottom: 5px;
-}
-
-.meta-value {
-    font-weight: 500;
-}
-
-.meta-value.available {
-    color: var(--primary-color);
-}
-
-.meta-value.unavailable {
-    color: var(--danger-color);
-}
-
 .product-description {
     margin: 30px 0;
 }
@@ -467,6 +444,7 @@
 /* Añadir estos estilos al archivo producto.css */
 
 /* Estilos para los iconos de características */
+
 .fas {
     font-size: 1.2rem;
     color: var(--primary-color);
@@ -475,11 +453,11 @@
     text-align: center;
 }
 
+/* Estilos mejorados para las características del producto */
 .meta-item {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 10px;
+    padding: 12px;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -495,28 +473,60 @@
     flex-direction: column;
 }
 
-/* Ajustar el grid para mejor espaciado */
-.product-meta {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin: 25px 0;
+.meta-label {
+    font-size: 0.75rem;
+    color: var(--gray-color);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
 }
 
-/* Estilos responsivos para los iconos */
+.meta-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: white;
+}
+
+.meta-value.available {
+    color: var(--primary-color);
+}
+
+.meta-value.unavailable {
+    color: var(--danger-color);
+}
+
+/* Ajustar iconos */
+.meta-item .fas {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    width: 24px;
+    text-align: center;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .meta-icon {
-        font-size: 1rem;
-        margin-right: 8px;
-        width: 20px;
+    .product-meta {
+        grid-template-columns: repeat(2, 1fr); /* Mantener 2 columnas */
+        gap: 10px;
     }
     
     .meta-item {
-        padding: 8px;
+        padding: 10px;
+        gap: 8px;
+        min-height: 60px; /* Altura mínima para uniformidad */
     }
     
-    .product-meta {
-        grid-template-columns: 1fr;
+    .meta-label {
+        font-size: 0.65rem;
+    }
+    
+    .meta-value {
+        font-size: 0.8rem;
+    }
+    
+    .meta-item .fas {
+        font-size: 0.9rem;
     }
 }
 
