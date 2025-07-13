@@ -458,7 +458,7 @@
 }
 
 /* Etiqueta "Promoción" - Amarillo cálido (llamativo, pero legible) */
-.product-tag.promocion {
+.product-tag.promoción {
     background-color: #f1c40f;      /* Amarillo dorado */
     border-left: 3px solid #f39c12; /* Amarillo oscuro */
     color: #2f3640;                 /* Oscuro para contraste */
