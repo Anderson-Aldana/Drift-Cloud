@@ -309,3 +309,36 @@ if (footerLogo) {
         }
     });
 }
+
+// En script.js, agregar al final del DOMContentLoaded
+const footerLogo = document.querySelector('.footer-col img');
+if (footerLogo) {
+    let clickCount = 0;
+    let clickTimer = null;
+    
+    footerLogo.addEventListener('click', function() {
+        clickCount++;
+        
+        if (clickTimer === null) {
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+                clickTimer = null;
+            }, 2000); // 2 segundos para los 3 clics
+        }
+        
+        if (clickCount === 3) {
+            clearTimeout(clickTimer);
+            clickCount = 0;
+            clickTimer = null;
+            window.location.href = 'login.html';
+        }
+    });
+}
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('Service Worker registrado', reg))
+      .catch(err => console.error('Error registrando SW:', err));
+  });
+}
