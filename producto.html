@@ -140,12 +140,53 @@
                 <span class="current-price">S/${product.price.toFixed(2)}</span>`}
             </div>
             <div class="product-meta">
-              ${product.type ? `<div class="meta-item"><i class="fas fa-box-open"></i><span>${product.type === 'kit' ? 'Kit completo' : 'Recarga'}</span></div>` : ''}
-              ${product.flavor ? `<div class="meta-item"><i class="fas fa-ice-cream"></i><span>${product.flavor}</span></div>` : ''}
-              ${product.puffs ? `<div class="meta-item"><i class="fas fa-smoking"></i><span>${product.puffs} puffs</span></div>` : ''}
-              ${product.capacity ? `<div class="meta-item"><i class="fas fa-tint"></i><span>${product.capacity}</span></div>` : ''}
-              ${product.nicotine ? `<div class="meta-item"><i class="fas fa-bolt"></i><span>${product.nicotine}</span></div>` : ''}
-              <div class="meta-item"><i class="fas fa-check-circle"></i><span class="${product.available ? 'available' : 'unavailable'}">${product.available ? 'En stock' : 'Agotado'}</span></div>
+              ${product.type ? `<div class="meta-item">
+                <i class="fas fa-box-open"></i>
+                <div class="meta-text">
+                  <span class="meta-label">Tipo</span>
+                  <span class="meta-value">${product.type === 'kit' ? 'Kit completo' : 'Recarga'}</span>
+                </div>
+              </div>` : ''}
+              
+              ${product.flavor ? `<div class="meta-item">
+                <i class="fas fa-ice-cream"></i>
+                <div class="meta-text">
+                  <span class="meta-label">Sabor</span>
+                  <span class="meta-value">${product.flavor}</span>
+                </div>
+              </div>` : ''}
+              
+              ${product.puffs ? `<div class="meta-item">
+                <i class="fas fa-smoking"></i>
+                <div class="meta-text">
+                  <span class="meta-label">Puffs</span>
+                  <span class="meta-value">${product.puffs}</span>
+                </div>
+              </div>` : ''}
+              
+              ${product.capacity ? `<div class="meta-item">
+                <i class="fas fa-tint"></i>
+                <div class="meta-text">
+                  <span class="meta-label">Capacidad</span>
+                  <span class="meta-value">${product.capacity}</span>
+                </div>
+              </div>` : ''}
+              
+              ${product.nicotine ? `<div class="meta-item">
+                <i class="fas fa-bolt"></i>
+                <div class="meta-text">
+                  <span class="meta-label">Nicotina</span>
+                  <span class="meta-value">${product.nicotine}</span>
+                </div>
+              </div>` : ''}
+              
+              <div class="meta-item">
+                <i class="fas fa-check-circle"></i>
+                <div class="meta-text">
+                  <span class="meta-label">Disponibilidad</span>
+                  <span class="meta-value ${product.available ? 'available' : 'unavailable'}">${product.available ? 'En stock' : 'Agotado'}</span>
+                </div>
+              </div>
             </div>
             <div class="product-description">
               <h3><i class="fas fa-align-left"></i> Descripción</h3>
