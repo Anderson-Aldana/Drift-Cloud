@@ -574,3 +574,32 @@
 .product-tag.nuevo::after {
     content: "🔥";
 }
+
+/* Preloader para la sección de productos */
+.products-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  position: absolute; /* Cambiado de relative a absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: 100%; /* Ocupa toda la altura del contenedor padre */
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--gray-color);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
