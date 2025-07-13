@@ -128,7 +128,7 @@
           </div>
           <div class="product-info">
             <div class="product-header">
-              <span class="brand">${product.brand}</span>
+              <a href="productos.html?search=${product.brand}"><span class="brand">${product.brand}</span></a>
               <h1>${product.name}</h1>
               ${offerDay && product.offerprice ? '<span class="product-tag sunday-offer">Solo por Hoy🔥!!</span>' : (product.tag ? `<span class="product-tag ${product.tag.toLowerCase().replace(/ /g, '-')}">${product.tag}</span>` : '')}
             </div>
