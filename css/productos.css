@@ -175,7 +175,7 @@
 
 .product-image {
     aspect-ratio: 1/1; /* Mantiene relación cuadrada */
-    padding: 15px;
+    padding: 10px;
     background-color: var(--dark-color); /* Fondo blanco */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -193,7 +193,7 @@
 }
 
 .product-info {
-    padding: 15px;
+    padding: 10px;
 }
 
 .product-brand {
