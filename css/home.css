@@ -99,9 +99,12 @@
 }
 
 .features-bar .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    display: flex;
+    max-width: 100%; /* Asegura que no exceda el ancho del padre */
+    margin: 0 auto; /* Centra horizontalmente */
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    align-items: center; /* Centra los elementos hijos verticalmente (opcional) */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
 }
 
 .feature {
@@ -480,7 +483,9 @@
 
         /* Features Bar */
     .features-bar .container {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
     
     /* Productos Destacados */
