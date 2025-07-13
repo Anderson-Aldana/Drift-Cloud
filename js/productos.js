@@ -50,7 +50,6 @@ function displayStoreProducts(products, containerId) {
         <div class="product-info">
           <h3>${product.name}</h3>
           <span class="product-brand">${product.brand}</span>
-          <p class="product-description-short">${product.description.substring(0, 60)}...</p>
           <div class="product-price">
             ${offerDay && product.offerprice ? `
               <span class="old-price">S/${product.price.toFixed(2)}</span>
