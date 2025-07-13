@@ -556,7 +556,7 @@
     content: "⛔";
 }
 
-.product-tag.promocion::before {
+.product-tag.promoción::before {
     content: "💎";
 }
 
@@ -571,7 +571,7 @@
     content: "🔥";
 }
 
-.product-tag.promocion::after {
+.product-tag.promoción::after {
     content: "💎";
 }
 
