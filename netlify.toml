@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "http://*"
+  to = "https://driftandcloud.netlify.app/:splat"
+  status = 301
+  force = true
