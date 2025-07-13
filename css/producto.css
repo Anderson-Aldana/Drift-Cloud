@@ -466,14 +466,6 @@
 /* Añadir estos estilos al archivo producto.css */
 
 /* Estilos para los iconos de características */
-.fas {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-right: 10px;
-    width: 24px;
-    text-align: center;
-}
-
 .meta-item {
     display: flex;
     flex-direction: row;
