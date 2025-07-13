@@ -1,0 +1,6 @@
+# Bloquea el acceso de los bots al panel de login de administración
+User-agent: *
+Disallow: /login.html
+
+# Permite todo lo demás
+Allow: /
