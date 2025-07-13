@@ -245,5 +245,25 @@
     </a>
 
     <script src="js/script.js"></script>
+    
+    <!-- Chatbot Driftie -->
+    <link rel="stylesheet" href="css/chatbot.css">
+    <div id="chatbot-container">
+    <div id="chat-header">
+        <img src="img/driftie-logo.png" alt="Driftie" id="driftie-logo">
+        <button id="close-chatbot">&times;</button>
+    </div>
+    <div id="chat-messages"></div>
+    <div id="chat-input-container">
+        <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+        <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+    </div>
+    </div>
+
+    <div id="chatbot-toggle">
+    <img src="img/driftie-logo.png" alt="Driftie">
+    <span id="driftie-tooltip">¡Hey! Soy Driftie, tu guía en Drift and Cloud.</span>
+    </div>
+    <script src="js/chatbot.js" defer></script>
 </body>
 </html>
