@@ -484,8 +484,36 @@
         /* Features Bar */
     .features-bar .container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 5px; /* Espacio entre features */
+    }
+
+    .feature {
+        display: flex; /* Flex para alinear icono + texto */
+        align-items: flex-start; /* Alinea al inicio (evita estiramiento) */
+        gap: 20px; /* Espacio entre icono y texto */
+        padding: 15px 0;
+    }
+
+    .feature i {
+        font-size: 2.2rem;
+        flex-shrink: 0; /* Evita que se encoja el icono */
+    }
+
+    .feature-content {
+        display: flex;
+        flex-direction: column; /* Texto en columna (h3 arriba, p abajo) */
+        gap: 5px; /* Espacio entre h3 y p */
+        text-align: left;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+        margin: 0; /* Elimina márgenes por defecto */
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+        margin: 0; /* Elimina márgenes por defecto */
     }
     
     /* Productos Destacados */
