@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
       suggestions: sugerenciasFiltradas("Ver promociones")
     },
     envio: {
-      text: "🚚 Hacemos envíos a:<br>• Piura<br>• Castilla<br>• Veintiséis de Octubre<br><br>• Talara<br><br>• Paita<br><br>• Sullana<br><br>• Sechura<br><br>🕒 Entrega en 24-48h<br>🛒 ¡Gratis a todo Piura y Castilla!",
+      text: "🚚 Hacemos envíos a:<br>• Piura<br>• Castilla<br>• Veintiséis de Octubre<br>• Talara<br>• Paita<br>• Sullana<br>• Sechura<br>🕒 Entrega en 24-48h<br>🛒 ¡Gratis a todo Piura y Castilla!",
       suggestions: sugerenciasFiltradas("Consultar envío")
     },
     pagos: {
