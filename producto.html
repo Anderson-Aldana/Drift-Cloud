@@ -133,11 +133,11 @@
               ${offerDay && product.offerprice ? '<span class="product-tag sunday-offer">Solo por Hoy🔥!!</span>' : (product.tag ? `<span class="product-tag ${product.tag.toLowerCase().replace(/ /g, '-')}">${product.tag}</span>` : '')}
             </div>
             <div class="product-price">
-              ${offerDay && product.offerprice ? `
-                <span class="old-price">S/${product.price.toFixed(2)}</span>
-                <span class="current-price">S/${product.offerprice.toFixed(2)}</span>` : `
-                ${product.oldPrice ? `<span class="old-price">S/${product.oldPrice.toFixed(2)}</span>` : ''}
-                <span class="current-price">S/${product.price.toFixed(2)}</span>`}
+              ${isOfferDay() && product.offerprice ? `
+              <span class="old-price">S/${product.price.toFixed(2)}</span>
+              <span class="current-price">S/${product.offerprice.toFixed(2)}</span>` : `
+              ${product.oldPrice ? `<span class="old-price">S/${product.oldPrice.toFixed(2)}</span>` : ''}
+              <span class="current-price">S/${product.price.toFixed(2)}</span>`}
             </div>
             <div class="product-meta">
               ${product.type ? `<div class="meta-item">
