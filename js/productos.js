@@ -20,11 +20,6 @@ async function fetchProductsFromFirebase() {
 // Inicia la carga
 fetchProductsFromFirebase();
 
-// Nueva función para verificar días de oferta
-function isOfferDay() {
-  const today = new Date().getDay();
-  return today === 0 || (includeSaturdayOffers && today === 6); // 0=Domingo, 6=Sábado
-}
 
 // ✅ Mostrar productos en el grid
 function displayStoreProducts(products, containerId) {

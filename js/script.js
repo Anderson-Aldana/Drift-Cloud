@@ -1,5 +1,20 @@
-// Agrega esto al inicio de productos.js o script.js
-const includeSaturdayOffers = false; // Cambiar a false para desactivar ofertas de sábado
+// Configuración de días de oferta (true = activado, false = desactivado)
+const offerDaysConfig = {
+  sunday: true,    // Domingo
+  monday: false,   // Lunes
+  tuesday: false,  // Martes
+  wednesday: true,// Miércoles
+  thursday: false, // Jueves
+  friday: false,   // Viernes
+  saturday: false  // Sábado
+};
+
+// Función para verificar si hoy es día de oferta
+function isOfferDay() {
+  const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+  const today = new Date().getDay(); // 0=Domingo, 1=Lunes, ..., 6=Sábado
+  return offerDaysConfig[days[today]];
+}
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
@@ -231,21 +246,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Nueva función para verificar días de oferta
-function isOfferDay() {
-  const today = new Date().getDay();
-  return today === 0 || (includeSaturdayOffers && today === 6); // 0=Domingo, 6=Sábado
-}
-
 // Función para manejar las ofertas dominicales
 function handleSundayOffers() {
-    const isOfferToday = isOfferDay(); // Cambiado de isSundayToday
+    const isOfferToday = isOfferDay();
     const sundayBanner = document.getElementById('sunday-offer-banner');
     
     // Mostrar/ocultar banner
     if (sundayBanner) {
         sundayBanner.style.display = isOfferToday ? 'block' : 'none';
     }
+    
     
     // Actualizar productos si estamos en la página de productos
     if (document.getElementById('products-grid')) {
