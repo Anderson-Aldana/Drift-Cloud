@@ -5,7 +5,7 @@ const offerDaysConfig = {
   tuesday: false,  // Martes
   wednesday: false,// Miércoles
   thursday: false, // Jueves
-  friday: true,   // Viernes
+  friday: false,   // Viernes
   saturday: false  // Sábado
 };
 
