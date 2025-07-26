@@ -1,42 +1,62 @@
-💨 Drift and Cloud
-Catálogo online de vape y accesorios – Drift and Cloud
+# 💨 Drift and Cloud – Catálogo Online de Vapeo y Accesorios
 
-🌐 En vivo en: https://driftandcloud.netlify.app/
+🌐 **En vivo**: [https://driftandcloud.netlify.app/](https://driftandcloud.netlify.app/)
 
-📌 Descripción
-Drift and Cloud es una tienda virtual especializada en productos de vapeo. Presenta un catálogo moderno de líquidos, kits, accesorios y más. La página está diseñada para ofrecer una experiencia rápida y clara mediante un frontend sencillo desplegado con Netlify.
+Drift and Cloud es una tienda virtual especializada en productos de vapeo. Presenta un catálogo moderno de líquidos, kits, accesorios y más, con un diseño sencillo y una experiencia de usuario ágil, alojado y desplegado con Netlify.
 
-🚀 Características principales
-🌬️ Catálogo de productos: sección para explorar y filtrar líquidos, kits y accesorios.
+---
 
-💳 Proceso de compra: simple flujo para seleccionar productos y proporcionar datos de pago (u orientación para pago por DM).
+## 🚀 Características Principales
 
-📱 Diseño responsive: optimizado para móviles y tablets.
+- 🌬️ **Catálogo de productos**  
+  Explora y filtra fácilmente entre líquidos, kits de inicio y accesorios.
 
-⚡ Despliegue continuo: alojado en Netlify, con builds automáticos desde tu repositorio.
+- 💳 **Proceso de compra**  
+  Flujo simple para seleccionar productos y solicitar tu pedido mediante formulario o mensaje directo (WhatsApp).
 
-🛠️ Tecnologías usadas
-HTML5 / CSS3 / JavaScript (o framework que estés usando: React, Vue, etc.)
+- 📱 **Diseño responsive**  
+  Optimizado para una navegación fluida en móviles, tablets y escritorio.
 
-Netlify como plataforma de hosting + CI/CD
+- ⚡ **Despliegue continuo**  
+  Alojado en **Netlify** con integración CI/CD automática desde el repositorio.
 
-Uso de formularios HTML o integración con bot para ventas por DM
-🎨 Diseño y estilo
-UI limpia y moderna
+---
 
-Imágenes de producto en alta calidad
+## 🛠️ Tecnologías Utilizadas
 
-Navegación minimalista: página principal, catálogo, contacto
+- **Frontend:** HTML5, CSS3, JavaScript  
+- **Hosting & CI/CD:** [Netlify](https://www.netlify.com/)  
+- **Otros:** Formularios HTML o integración con bot para ventas por DM
 
-🧾 Uso
-Navega por el catálogo
+---
 
-Selecciona producto(s) y agrega al carrito
+## 🎨 Diseño
 
-Finaliza vía formulario o envía mensaje por DM para concretar pago/envío
+- UI limpia y moderna  
+- Imágenes de productos en alta calidad  
+- Navegación minimalista: página principal, catálogo y contacto
 
-🤝 Contribuciones
-¡Bienvenidas! Si quieres ayudar con mejoras (UI, agregados de producto, optimización), abre un issue o envía un pull request.
+---
 
-📍 Sobre el creador de la web
-Desarrollador: Anderson Aldana
+## 🧾 Cómo Usar
+
+1. Navega por el catálogo.
+2. Selecciona uno o varios productos.
+3. Solicita tu pedido vía [WhatsApp](https://wa.me/) o usando el formulario de contacto.
+
+---
+
+## 🤝 Contribuciones
+
+¡Bienvenidas!  
+Si deseas aportar con mejoras (UI, nuevos productos, rendimiento), puedes:
+
+- Abrir un issue
+- Enviar un pull request
+
+---
+
+## 📍 Sobre el Creador
+
+**Desarrollador:** Anderson Aldana  
+Proyecto personal creado como tienda online funcional y práctica.
